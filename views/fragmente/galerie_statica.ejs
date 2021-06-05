@@ -1,0 +1,21 @@
+<div id = "galerie-statica">
+    
+    <hr id="hr-stil">
+  <br>
+  <div id="grid-galerie">
+    <% for (let im of locals.imagini) {%>
+      
+      <figure>
+        <picture title = "<%- im.titlu%>">
+          <source srcset="<%- im.mic %>" media = "(max-width:600px)"/>
+          <source srcset="<%- im.mediu %>" media = "(max-width:1200px)"/>
+          
+          <img src="<%- im.mare %>" alt="<%- im.alt %>" >
+          <div class="overlay">
+            <div class="text"><a href="<%- im.cr_link %>"><%- im.cr %></a></div>
+          </div>
+        </picture>
+        <figcaption><%- im.descriere %></figcaption>
+    </figure>
+    <%} %>
+</div>

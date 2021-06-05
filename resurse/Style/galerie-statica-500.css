@@ -1,0 +1,10 @@
+
+@media screen and (max-width:700px){
+    
+    #grid-galerie {
+        display:block;
+    }
+    #grid-galerie figure:nth-child(-2n+24){
+        display:none;
+      }
+}

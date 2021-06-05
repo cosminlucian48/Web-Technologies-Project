@@ -1,0 +1,244 @@
+{
+    "cale_galerie":"resurse/Poze/galerie",
+    "imagini":[
+        {
+            "fisier":"gal1.jpg",
+            "descriere":"Gal 1",
+            "titlu":"titlu img 1",
+            "alt":"text alternativ imagine",
+            "luni":["mai","februarie","iunie","ianuarie","februarie","iulie","octombrie"], 
+            "cr":"Image without copyrights."
+        },
+        {
+            "fisier":"gal2.jpg",
+            "descriere":"Gal 2",
+            "titlu":"titlu img 1",
+            "alt":"text alternativ imagine",
+            "luni":["mai","februarie","iunie","ianuarie","februarie","iulie","octombrie"], 
+            "cr":"Image without copyrights."
+        },
+        {
+            "fisier":"gal3.jpg",
+            "descriere":"Gal 3",
+            "titlu":"titlu img 1",
+            "alt":"text alternativ imagine",
+            "luni":["mai","martie","aprilie","noiembrie","decembrie","iulie","august","februarie"], 
+            "cr":"Image without copyrights."
+        },
+        {
+            "fisier":"gal4.jpg",
+            "descriere":"Gal 4",
+            "titlu":"titlu img 1",
+            "alt":"text alternativ imagine",
+            "luni":["mai","februarie","iunie","ianuarie","februarie","iulie","octombrie"], 
+            "cr":"Image without copyrights."
+        },
+        {
+            "fisier":"gal5.jpg",
+            "descriere":"Gal 5",
+            "titlu":"titlu img 1",
+            "alt":"text alternativ imagine",
+            "luni":["mai","martie","aprilie","noiembrie","decembrie","iulie","august","februarie"], 
+            "cr":"Image without copyrights."
+        },
+        {
+            "fisier":"gal6.jpg",
+            "descriere":"Gal 6",
+            "titlu":"titlu img 1",
+            "alt":"text alternativ imagine",
+            "luni":["mai","februarie","iunie","ianuarie","februarie","iulie","octombrie"], 
+            "cr":"Image without copyrights."
+        },
+        {
+            "fisier":"gal7.jpg",
+            "descriere":"Gal 7",
+            "titlu":"titlu img 1",
+            "alt":"text alternativ imagine",
+            "luni":["mai","martie","aprilie","noiembrie","decembrie","iulie","august","februarie"], 
+            "cr":"Image without copyrights."
+        },
+        {
+            "fisier":"gal8.jpg",
+            "descriere":"Gal 8",
+            "titlu":"titlu img 1",
+            "alt":"text alternativ imagine",
+            "luni":["mai","martie","aprilie","noiembrie","decembrie","iulie","august","februarie"], 
+            "cr":"Image without copyrights."
+        },
+        {
+            "fisier":"gal9.jpg",
+            "descriere":"Gal 9",
+            "titlu":"titlu img 1",
+            "alt":"text alternativ imagine",
+            "luni":["mai","februarie","iunie","ianuarie","februarie","iulie","septembrie","octombrie"], 
+            "cr":"Image without copyrights."
+        },
+        {
+            "fisier":"gal10.jpg",
+            "descriere":"Gal 10",
+            "titlu":"titlu img 1",
+            "alt":"text alternativ imagine",
+            "luni":["octombrie","martie","aprilie","noiembrie","decembrie","iulie","august","februarie"], 
+            "cr":"Image without copyrights."
+        },
+        {
+            "fisier":"gal11.jpg",
+            "descriere":"Gal 11",
+            "titlu":"titlu img 1",
+            "alt":"text alternativ imagine",
+            "luni":["mai","februarie","iunie","ianuarie","februarie","iulie","septembrie","octombrie"], 
+            "cr":"Image without copyrights."
+        },
+        {
+            "fisier":"gal12.jpg",
+            "descriere":"Gal 12",
+            "titlu":"titlu img 1",
+            "alt":"text alternativ imagine",
+            "luni":["mai","februarie","iunie","ianuarie","februarie","iulie","septembrie","octombrie"], 
+            "cr":"Image without copyrights."
+        },
+        {
+            "fisier":"gal13.jpg",
+            "descriere":"Gal 13",
+            "titlu":"titlu img 1",
+            "alt":"text alternativ imagine",
+            "luni":["februarie","iunie","ianuarie","februarie","iulie","septembrie","octombrie"], 
+            "cr":"Image without copyrights."
+        },
+        {
+            "fisier":"gal14.jpg",
+            "descriere":"Gal 14",
+            "titlu":"titlu img 1",
+            "alt":"text alternativ imagine",
+            "luni":["octombrie","martie","aprilie","noiembrie","decembrie","iulie","august","februarie"], 
+            "cr":"Image without copyrights."
+        },
+        {
+            "fisier":"gal15.jpg",
+            "descriere":"Gal 15",
+            "titlu":"titlu img 1",
+            "alt":"text alternativ imagine",
+            "luni":["februarie","iunie","ianuarie","februarie","iulie","septembrie","octombrie"], 
+            "cr":"Image without copyrights."
+        },
+        {
+            "fisier":"gal16_cc_by.jpg",
+            "descriere":"Gal 16",
+            "titlu":"titlu img 1",
+            "alt":"text alternativ imagine",
+            "luni":["mai","octombrie","martie","aprilie","noiembrie","decembrie","iulie","august","februarie"],
+            "cr":"Photo by Magnus Manske",
+            "cr_link":"https://en.wikipedia.org/wiki/User:Magnus_Manske"
+        },
+        {
+            "fisier":"gal17_cc_by.jpg",
+            "descriere":"Gal 17",
+            "titlu":"titlu img 1",
+            "alt":"text alternativ imagine",
+            "luni":["octombrie","martie","aprilie","noiembrie","decembrie","iulie","august","februarie","mai"],
+            "cr":"Photo by Jakob Owens",
+            "cr_link":"https://unsplash.com/@jakobowens1"
+        },
+        {
+            "fisier":"gal18_cc_by.jpg",
+            "descriere":"Gal 18",
+            "titlu":"titlu img 1",
+            "alt":"text alternativ imagine",
+            "luni":["octombrie","martie","aprilie","noiembrie","decembrie","iulie","august","februarie","mai"],
+            "cr":"Photo by JOSHUA COLEMAN",
+            "cr_link":"https://unsplash.com/@joshstyle"
+        },
+        {
+            "fisier":"gal19_cc_by.jpg",
+            "descriere":"Gal 19",
+            "titlu":"titlu img 1",
+            "alt":"text alternativ imagine",
+            "luni":["octombrie","martie","aprilie","noiembrie","decembrie","iulie","august","februarie"],
+            "cr":"Photo by Kamil Pietrzak",
+            "cr_link":"https://unsplash.com/@kpietrzakweb"
+        },
+        {
+            "fisier":"gal20_cc_by.jpg",
+            "descriere":"Gal 20",
+            "titlu":"titlu img 1",
+            "alt":"text alternativ imagine",
+            "luni":["octombrie","martie","aprilie","noiembrie","decembrie","iulie","august","februarie","mai"],
+            "cr":"Photo by Lina Trochez",
+            "cr_link":"https://unsplash.com/@lmtrochezz"
+        },
+        {
+            "fisier":"gal21_cc_by.jpg",
+            "descriere":"Gal 21",
+            "titlu":"titlu img 1",
+            "alt":"text alternativ imagine",
+            "luni":["octombrie","martie","aprilie","noiembrie","decembrie","iulie","august","februarie"],
+            "cr":"Photo by Mar Xiao Munoz",
+            "cr_link":"https://unsplash.com/@mxmm"
+        },
+        {
+            "fisier":"gal22_cc_by.jpg",
+            "descriere":"Gal 22",
+            "titlu":"titlu img 1",
+            "alt":"text alternativ imagine",
+            "luni":["octombrie","martie","aprilie","noiembrie","decembrie","iulie","august","februarie","mai"],
+            "cr":"Photo by Raimond Klavins",
+            "cr_link":"https://unsplash.com/@raimondklavins"
+        },
+        {
+            "fisier":"gal23_cc_by.jpg",
+            "descriere":"Gal 23",
+            "titlu":"titlu img 1",
+            "alt":"text alternativ imagine",
+            "luni":["octombrie","martie","aprilie","noiembrie","decembrie","iulie","august","februarie","mai"],
+            "cr":"Photo by Ricardo Gomez Angel",
+            "cr_link":"https://unsplash.com/@ripato"
+        },
+        {
+            "fisier":"gal24_cc_by.jpg",
+            "descriere":"Gal 24",
+            "titlu":"titlu img 1",
+            "alt":"text alternativ imagine",
+            "luni":["octombrie","martie","aprilie","noiembrie","decembrie","iulie","august","februarie"],
+            "cr":"Photo by Alex Braga",
+            "cr_link":"https://unsplash.com/@awbraga"
+        },
+        {
+            "fisier":"gal25_cc_by.jpg",
+            "descriere":"Gal 25",
+            "titlu":"titlu img 1",
+            "alt":"text alternativ imagine",
+            "luni":["octombrie","martie","aprilie","noiembrie","decembrie","iulie","august","februarie","mai"],
+            "cr":"Photo by Filipe Dos Santos Mendes",
+            "cr_link":"https://unsplash.com/@dos?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+        },
+        {
+            "fisier":"gal26_cc_by.jpg",
+            "descriere":"Gal 26",
+            "titlu":"titlu img 1",
+            "alt":"text alternativ imagine",
+            "luni":["octombrie","martie","aprilie","noiembrie","decembrie","iulie","august","februarie"],
+            "cr":"Photo by Colton Jones",
+            "cr_link":"https://unsplash.com/@colt10jordan"
+        },
+        {
+            "fisier":"gal27_cc_by.jpg",
+            "descriere":"Gal 27",
+            "titlu":"titlu img 1",
+            "alt":"text alternativ imagine",
+            "luni":["octombrie","martie","aprilie","noiembrie","decembrie","iulie","august","februarie","mai"],
+            "cr":"Photo by Filipe Dos Santos Mendes",
+            "cr_link":"https://unsplash.com/@dos?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+        },
+        {
+            "fisier":"gal28_cc_by.jpg",
+            "descriere":"Gal 28",
+            "titlu":"titlu img 1",
+            "alt":"text alternativ imagine",
+            "luni":["octombrie","martie","aprilie","noiembrie","decembrie","iulie","august","februarie"],
+            "cr":"Photo by Saurav Mahto on Unsplash",
+            "cr_link":"https://unsplash.com/@sauravmahto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            
+        }
+    ]
+    
+}

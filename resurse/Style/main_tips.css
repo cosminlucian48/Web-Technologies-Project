@@ -1,0 +1,76 @@
+#main_tips {
+    background: rgb(171, 170, 159,.5);
+    
+    border-left: 0.1em solid grey;
+    border-right: 0.1em solid grey;
+    display: grid;
+    grid-template-areas:
+      "atention atention atention "
+      "tips_list tips_list tips_list "
+      "tip1 tip2 tip3 "
+      "tip4 tip5 tip6 "
+      "tip7 tip8 tip9 ";
+    padding: var(--intern-padding);
+    grid-gap: 1.5rem;
+  }
+  #main_tips section {
+    border: 0.2em solid black;
+    border-radius: 1em;
+    padding: 1rem;
+    background: rgb(245,245,245,.5);
+  }
+  #main_tips p#atention {
+    grid-area: atention;
+    font-size: 1.1em;
+    margin-top: var(--body-padding);
+  }
+  #main_tips h2#tips_list {
+    grid-area: tips_list;
+  }
+  #main_tips section#tip1 {
+    grid-area: tip1;
+  }
+  #main_tips section#tip2 {
+    grid-area: tip2;
+  }
+  #main_tips section#tip3 {
+    grid-area: tip3;
+  }
+  #main_tips section#tip4 {
+    grid-area: tip4;
+  }
+  #main_tips section#tip5 {
+    grid-area: tip5;
+  }
+  #main_tips section#tip6 {
+    grid-area: tip6;
+  }
+  #main_tips section#tip7 {
+    grid-area: tip7;
+  }
+  #main_tips section#tip8 {
+    grid-area: tip8;
+  }
+  #main_tips section#tip9 {
+    grid-area: tip9;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    #main_tips{
+        grid-template-areas:
+      "atention "
+      "tips_list"
+      "tip1"
+      "tip2"
+      "tip3"
+      "tip4"
+      "tip5"
+      "tip6"
+      "tip7"
+      "tip8"
+      "tip9";
+      grid-template-columns: 1fr;
+    }
+    
+  }
+  

@@ -1,0 +1,12 @@
+article.solo_product{
+    width:35rem;
+    margin-left:auto;
+    margin-right:auto;
+    display:flex;
+    grid-template-columns: repeat(2,1fr);
+    border: 0.2em solid var(--border);
+  border-radius: 1em;
+  padding: 3rem;
+  background: var(--section_color);
+  overflow: hidden;
+}

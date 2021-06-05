@@ -1,0 +1,235 @@
+
+$numar-poze: <%=nrPoze %>;
+main{
+	display:grid;
+	grid-template-areas:
+	"cont"
+	"galerie";
+	background: rgb(171, 170, 159,.5);
+  
+  border-left: 0.1em solid grey;
+  border-right: 0.1em solid grey;
+	
+}
+#sectiune-galerie-animata{
+	grid-area:"galerie";
+}
+#container_mare{
+	grid-area:"cont";
+	width:100%;
+	margin-bottom:10em;
+}
+.container {
+	
+	height: 500px;
+	width: 100%;
+	top: 60px;
+	display:flex;
+	
+  }
+  .container a{
+	  text-decoration:none;
+	  color:#add8e6;
+  }
+  
+  .card {
+	display: flex;
+	height: 35em;
+	width: 19em;
+	background-color: #17141d;
+	border-radius: 10px;
+	box-shadow: -1rem 0 3rem #000;
+  /*   margin-left: -50px; */
+	transition: 0.4s ease-out;
+	position: relative;
+	left: 0px;
+	color:white;
+  }
+  
+  .card:not(:first-child) {
+	  margin-left: -50px;
+  }
+  
+  .card:hover {
+	transform: translateY(-20px);
+	transition: 0.4s ease-out;
+  }
+  
+  .card:hover ~ .card {
+	position: relative;
+	left: 50px;
+	transition: 0.4s ease-out;
+  }
+  
+  .title {
+	color: white;
+	font-weight: 300;
+	position: absolute;
+	left: 20px;
+	top: 15px;
+  }
+  
+  .bar {
+	position: absolute;
+	top: 100px;
+	left: 20px;
+	height: 5px;
+	width: 150px;
+  }
+  
+  .emptybar {
+	background-color: #2e3033;
+	width: 100%;
+	height: 100%;
+  }
+  
+  .filledbar {
+	position: absolute;
+	top: 0px;
+	z-index: 3;
+	width: 0px;
+	height: 100%;
+	background: rgb(0,154,217);
+	background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
+	transition: 0.6s ease-out;
+  }
+  
+  .card:hover .filledbar {
+	width: 120px;
+	transition: 0.4s ease-out;
+  }
+  
+  .circle {
+	  position: relative;
+	top:100px;
+	padding:1em;
+  }
+  
+  .stroke {
+	stroke: white;
+	stroke-dasharray: 360;
+	stroke-dashoffset: 360;
+	transition: 0.6s ease-out;
+  }
+  
+  
+  .card:hover .stroke {
+	stroke-dashoffset: 100;
+	transition: 0.6s ease-out;
+  }
+
+#sectiune-galerie-animata{
+	
+	display: flex;
+  justify-content: left;
+  top:10em;
+  
+}
+div#galerie-animata img{
+	width:100%;
+	height:100%;
+}
+.galerie-a{
+	width:35.8em;
+	height:22.81em;
+	padding:0;
+	border: 20px solid pink;
+	border-image:url('/resurse/Poze/chain.png') 23 22 22 26 round;
+	position:relative;
+	overflow:hidden;
+}
+.galerie-a figcaption{
+	position:absolute;
+	bottom:0;
+	background:rgba(255,255,255,0.7);
+	width:100%;
+	text-align:center;
+}
+.galerie-a figure{
+	position:relative;
+	width:31.25em;
+	height:20.81em;
+}
+
+#galerie-animata figure{	
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:0;
+	animation-name:diagonala;
+	animation-timing-function:linear;
+	animation-iteration-count:infinite;
+	animation-fill-mode:forwards;
+	animation-duration:#{ $numar-poze * 3}s;	
+	transform-origin:center center;
+	
+}
+#galerie-animata:hover figure {
+	animation-play-state: paused;
+  }
+
+@for $i from 1 through $numar-poze{
+	#galerie-animata figure:nth-of-type(#{$i}){
+		animation-delay:#{3 * $numar-poze - 3 * $i}s;
+	}
+}
+
+
+/*cum calculam timpii:
+- avem 7 poze; vrem pentru fiecare un timp de afisare de 1.5 secunde si o trecere spre urmatoarea poza de 1.5 secunde
+- rezulta 3 secunde pentru fiecare imagine
+- 7imagini * 3secunde =21 secunde in total pentru animatie (animation-duration) si fiecare poza cu un delay = 3* numarul de ordine
+- momentul in care trebuie ascunsa poza si pusa in spatele celorlalte (ca sa isi astepte randul pentru noua animatie:
+il calculam cu formula  timp_afisare(normal+trecerea la urmatoarea poza)/timp_total*100 = 3/21*100 =  14.285714(aproximativ)
+100%..... 21s    1/$numar-poze * 100
+x%........3s
+
+- calculam 100-14.285714=85.714286 - la acest moment imaginea trebuie sa se vada in spatele imaginii care se afiseaza in mod curent (ca sa se vada si cat timp se realizeaza efectul de schimbare a imaginii
+*/
+$a: #{1 / $numar-poze * 100};
+$b : #{1 / $numar-poze * 100 /2};
+$c : #{1 / $numar-poze * 100 + 0.0001};
+$d : #{100 - 1 / $numar-poze * 100};
+$e : #{100 - 1 / $numar-poze * 100 + 0.0001};
+$f : #{1 / $numar-poze * 100 - 1} ;
+
+@keyframes diagonala{ 
+	0% {
+		z-index:10;
+		opacity:1;
+	} /*perioada 0-5% in care se afiseaza fara efect *//*trnaformare i imag completa, f e disparuta */
+	#{$b}% { 
+		clip-path: polygon(100% 0, 0 100%, 0 0, 100% 0, 100% 100%, 0 100%, 100% 0, 100% 0); /* imag completa */
+	}
+	#{$f}%{
+		opacity:1;
+	} /* de  aici doresc sa descresc si opacitatea;*/
+	#{$a}%{
+		z-index:10;
+		opacity:0;
+		clip-path: polygon(0 0, 0 0, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%, 100% 0); /*imag disparuta*/
+	}
+	#{$c}%{
+		z-index:-10;
+		clip-path: polygon(100% 0, 0 100%, 0 0, 100% 0, 100% 100%, 0 100%, 100% 0, 100% 0);/* imag completa */
+	}/* il ascund cat mai in spate sa nu vina peste imaginile care erau mai sus in html decat el*/
+	
+	#{$d}%{
+		z-index:-10;
+		opacity:0;
+		clip-path: polygon(100% 0, 0 100%, 0 0, 100% 0, 100% 100%, 0 100%, 100% 0, 100% 0);/* imag completa */
+	}	
+	#{$e}%{
+		z-index:0;
+	}/*setez z-index la 0 ca sa revina la ordinea normala de afisare*/
+	100%{
+		opacity:1;
+		z-index:0;
+	}
+}
+
+@media screen and (max-width:500px){
+	#sectiune-galerie-animata{
+		display: none;
+	}
+}

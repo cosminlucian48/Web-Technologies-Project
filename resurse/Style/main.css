@@ -1,0 +1,254 @@
+/*importuri*/
+@import "nav_1.css";
+@import "hr.css";
+@import "link-top.css";
+@import "table.css";
+@import "iframe.css";
+@import "banner.css";
+@import "video.css";
+@import "404.css";
+@import "products.css";
+@import "products-1200.css";
+@import "products-500.css";
+@import "product.css";
+
+@import "galerie-statica.css";
+@import "galerie-statica-500.css";
+@import "galerie-statica-1200.css";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,100;1,300&display=swap');
+
+
+
+
+html {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  counter-reset: summary;
+  margin-top: 0;
+  margin-bottom: 0;
+  --body-padding: 2.5rem;
+  --intern-padding: 1rem;
+  --culoare1: #db2b25;
+  --culoare2: #add8e6;
+  --culoare3: #1c3555;
+  --culoare4: #f5f5f5;
+  --culoare5: #16181e;
+  --overlay:#008CBA;
+  --border:black;
+  --section_color:rgb(245,245,245,.5);
+  --background-light:linear-gradient(
+    transparent,
+    transparent 5%,
+    white 50%,
+    transparent 70%,
+    transparent
+  ),
+  url("../Poze/backgr.jpg");
+  
+
+  /*am adaugat doua imagini de background separandu-le cu virgula*/
+  background-image: var(--background-light);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  background-size: cover;
+  padding-left: var(--body-padding);
+  padding-right: var(--body-padding);
+  padding-top: 0;
+  padding-bottom: 0;
+
+  min-width: 330px; /*latimea minima trebuie sa fie mai mica decat orice dispozitiv pentru a evita scrollbar-ul orizontal*/
+}
+
+.dark{
+  --culoare1: #1c3555;
+  --culoare2: rgba(141, 8, 8, 0.507);
+  --culoare3: #16181e;
+  --culoare4: rgb(245,245,245,.7);
+  --culoare5: #16181e;
+  --border:rgb(170, 168, 168);
+  --overlay:#044c64;
+  --section_color:rgba(245, 245, 245, 0.13);
+  --background-light:linear-gradient(to bottom, transparent 0%, black 100%),
+  url("../Poze/backgr.jpg");
+}
+
+h1 {
+  color:var(--culoare5);
+  font-size: 3rem;
+  text-shadow: 0 0 0.01em white, 0 0 0.02em white, 0 0 0.03em white,
+    0 0 0.03em white, 0 0 0.3em white;
+  font-family: Bradley Hand, cursive;
+  letter-spacing: 0.2em;
+  
+}
+h1 >span{
+  color:var(--culoare1);
+}
+h1 > img {
+  height:6rem;
+  position: absolute;
+  
+}
+main#home {
+  background: rgb(171, 170, 159,.5);
+  
+  border-left: 0.1em solid grey;
+  border-right: 0.1em solid grey;
+  display: grid;
+  grid-template-areas:
+    "zona1 zona1 zona1 zona1"
+    "zona1 zona1 zona1 zona1"
+    "zona3 zona2 zona2 zona4"
+    "zona5 zona2 zona2 zona4"
+    "zona5 zona6 zona6 zona7"
+    "zona8 zona8 zona8 zona8"
+    "statica statica statica statica";
+  padding: var(--intern-padding);
+  grid-gap: 1.5rem;
+}
+main section {
+  border: 0.2em solid var(--border);
+  border-radius: 1em;
+  padding: 1rem;
+  background: var(--section_color);
+}
+main section#zona1 {
+  grid-area: zona1;
+  font-size: 1.1em;
+  margin-top: var(--body-padding);
+}
+main section#zona1 p {
+  margin-top: 1em;
+}
+main section#zona2 {
+  grid-area: zona2;
+}
+main section#zona3 {
+  grid-area: zona3;
+}
+main section#zona4 {
+  grid-area: zona4;
+}
+main section#zona5 {
+  grid-area: zona5;
+}
+main section#zona6 {
+  grid-area: zona6;
+}
+main section#zona7 {
+  grid-area: zona7;
+}
+main section#zona8 {
+  grid-area: zona8;
+}
+
+
+
+#zona8 {
+  text-align: center;
+  padding:0;
+  padding-top:2rem;
+  padding-bottom :7rem;
+  display: grid;
+  grid-template-areas:
+    "ivideos ivideos"
+    "steps steps"
+    "detalii carousel"
+    "video video";
+  grid-template-columns: 2fr 3fr;
+  justify-content: center;
+  grid-gap:3rem;
+}
+#zona8 section{
+  border:0;
+  background: transparent;
+}
+#video_vtt{
+  grid-area:video;
+}
+#steps{
+  grid-area: steps;
+  text-align: left;
+  padding-left:2rem;
+}
+
+details > summary {
+  background-color: var(--culoare3);
+  color:var(--culoare4);
+  cursor: pointer;
+  padding: .5rem 1rem;
+}
+
+details > summary > * {
+  display: inline;
+}
+
+details > p, details > ol {
+  border: 2px solid var(--culoare3);
+  margin-top: 0;
+  padding: 1rem;
+}
+details  li{
+  margin-left: 1rem;
+}
+
+#detalii{
+  grid-area:detalii;
+}
+summary::before {
+  counter-increment: summary;
+  content: "P. " counter(summary) ": ";
+}
+#carousel{
+  grid-area:carousel;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding:0;
+  margin:0;
+  
+}
+
+#galerie_st{
+  grid-area:statica;
+}
+#carousel img{
+  width:80%;
+  
+  
+}
+
+footer {
+  background-color: var(--culoare3);
+  color: var(--culoare4);
+  padding-left: var(--intern-padding);
+  padding-right: var(--intern-padding);
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  font-size:1rem;
+}
+footer a{
+  color:var(--culoare4);
+}
+main#main_tips img{
+  width:50%;
+}
+
+
+button#theme {
+  display: block;
+  position: fixed;
+  top:1rem;
+  right:1rem;
+  width:3rem;
+  height:3rem;
+  border-radius:50%;
+}
+
+

@@ -1,0 +1,15 @@
+@media screen and (max-width:750px){
+
+    main#shop{
+        grid-template-columns:1fr;
+    }
+    main#shop h3{
+        grid-column: span 1; 
+        
+    }
+    div#filers{
+    
+        grid-column: span 1;
+        
+      }
+}

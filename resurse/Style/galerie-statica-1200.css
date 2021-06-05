@@ -1,0 +1,8 @@
+@media screen and (max-width:1200px){
+    #grid-galerie {
+        grid-template-columns: repeat(2,1fr);
+    }
+    #grid-galerie figure:nth-child(-2n+24){
+        display:none;
+      }
+}

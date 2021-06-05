@@ -1,0 +1,52 @@
+/* tabelul */
+table,
+th,
+td {
+  text-align: center;
+}
+#zona2{
+  overflow: auto;
+}
+
+main section#zona2 table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+table th {
+  font-weight: bold;
+  color: var(--culoare5);
+  background-color: var(--culoare1);
+  padding: 0.6em;
+}
+table td {
+  padding: 0.5em;
+}
+table tr td:nth-child(odd) {
+  background-color: var(--culoare4);
+}
+table tr td:nth-child(even) {
+  background-color: var(--culoare2);
+}
+table tfoot tr td:nth-child(n) {
+  border-top: 0.1em solid #101010;
+  background-color: var(--culoare1);
+}
+table td:nth-child(1) {
+  border-right: 0.1em solid #101010;
+}
+table td:nth-child(2) {
+  border-right: 0.1em solid #101010;
+}
+table td:nth-child(3) {
+  border-right: 0.1em solid #101010;
+}
+table td:nth-child(4) {
+  border-right: 0.1em solid #101010;
+}
+
+table tr:hover td {
+  background-color: var(--culoare3);
+  color:var(--culoare4);
+}

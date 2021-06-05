@@ -1,0 +1,195 @@
+#watermark{
+    display:none;
+}
+
+@media print{
+    main,body,section,div{
+        
+        padding:0;
+        margin:0;
+        
+    }
+    html body{
+        width:100%;
+        left:0;
+        padding:0;
+       
+        
+    }
+    body main#home{
+        padding:0;
+        margin:0;
+        border:0;
+        background-color: white;
+        width:100%;
+        display: grid;
+        grid-template-areas:
+        "zona1" "zona2" "zona8";
+        display:block;
+    }
+    body main section{
+        border:0;
+        border-radius:0;
+        background-color: transparent;
+    }
+    body main #video_vtt{
+        display:none;
+    }
+    img {
+        display:none;
+    }
+    
+    #watermark
+    {
+        display: flex;
+        position: fixed;
+        bottom:0;
+        color:rgba(0,0,0,0.4);
+        right:0;
+    }
+    #watermark::after{
+        display: block;
+        width:4cm;
+        height:1cm;
+        background: white;
+        border:3px solid black;
+        opacity:0.4;
+        font-size:17px;
+        border-radius:10px 0 0 10px;
+        border-right:none;
+        font-weight: bold;
+        text-align: center;
+        content:"Bejan-Topse Lucian-Cosmin";
+    }
+    .banner{
+        position: absolute;
+        top: 90%;
+        left:15%;
+        width:70%;
+        border:4px inset black;
+        font-size:30px;
+        animation: none;
+        visibility: visible;
+        
+    }
+    body main section#zona8 section#steps details >summary{
+        background-color: white;
+        color:black;
+    }
+    h1{
+        
+        margin-top: 50%;
+		text-align:center;
+		margin-left:1cm;
+    }
+    header{
+        display:block;
+    }
+    nav{
+        
+        color:black;
+        display:block;
+        page-break-after:always;
+        position: static;
+        height:auto;
+        
+    }
+    nav li a{
+        color:black;
+        
+    }
+    
+    nav ul.menu > li{
+        margin-left:10rem;
+        text-align:left;
+        float:none;
+        list-style-type: disc !important;
+    }
+    nav span#home-btn {
+        color: black;
+        float:left;
+    }
+    nav ul li a svg{
+        color:transparent;
+    }
+    iframe{
+        display:none;
+    }
+    section#carousel{
+        display:none;
+    }
+    .gotop{
+        display:none;
+    }
+
+    body main section#zona1{
+        width:100%;
+        
+        border:0;
+        border-radius:0;
+        background-color: white;
+        page-break-after:always;
+    }
+    #zona2{
+        border:0;
+        border-radius:0;
+        background-color: white;
+    }
+    
+    #zona2{
+        width: 100%;
+    }
+    #zona3 {
+        display:none;
+    }
+    #zona4 {
+        display:none;
+    }
+    #zona5 {
+        display:none;
+    }
+    #zona6 {
+        display:none;
+    }
+    #zona7 {
+        display:none;
+    }
+    #ivideos {
+        display:none;
+    }
+    body main section#zona8{
+        grid-template-areas:"steps" "detalii";
+        display:block;
+        
+    }
+    body main section#zona8 section#steps{
+        page-break-after:always;
+    }
+    footer{
+        position: static;
+        bottom:0;
+        page-break-before: always;
+    }
+
+    #galerie_st{
+        display: none;
+    }
+    @page {
+        size: A4 portrait;
+        margin-bottom:2cm;
+        margin-top:2cm;
+        counter-increment: page;
+            
+    }
+    @page:left{
+    
+        margin-left:3cm;
+        margin-right:1cm;
+    }
+    @page:right{
+    
+        margin-right:3cm;
+        margin-left:1cm;
+    }
+
+}

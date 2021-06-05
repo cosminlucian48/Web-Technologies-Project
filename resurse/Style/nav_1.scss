@@ -1,0 +1,116 @@
+body {
+  --menu-height: 3rem;
+}
+
+nav {
+  ul {
+    &.menu {
+      ul {
+        a {
+          background: var(--culoare3);
+        }
+        display: none;
+        position: absolute;
+        width: 100%;
+      }
+
+      > li {
+        float: left;
+        width: 7.8rem;
+        position: relative;
+
+        /* pentru ca submeniul pozitionat relativ sa aiba ca referinta parintele li*/
+      }
+      li {
+        &:hover > ul {
+          display: block;
+          transform-origin: top center;
+          animation: growOut 0.3s ease-in-out;
+        }
+        /*text centrat pe orizontala*/
+        text-align: center;
+
+        /*ascundem bullets*/
+        list-style-type: none;
+        cursor: pointer;
+      }
+    }
+
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    &:hover {
+      color: var(--culoare5);
+      background: var(--culoare1);
+      transition: color 300ms linear;
+
+      span#home-btn {
+        color: var(--culoare5);
+        background: var(--culoare1);
+        transition: color 300ms linear;
+      }
+    }
+    text-decoration: none;
+    color: var(--culoare4);
+    display: block;
+    font-weight: bold;
+    /*inaltimea butonului si inaltimea liniei de text sunt identice 
+          pentru a centra textul pe verticala in element
+           - merge doar daca textul are o singura linie*/
+    height: var(--menu-height);
+    line-height: var(--menu-height);
+  }
+  height: var(--menu-height);
+  width: 100%;
+  top: 0;
+  padding: 0;
+  z-index: 10;
+
+  /*ca sa fie pozitionat normal in partea de sus a containerului, sub sigla, 
+      dar apoi cand dam scroll sa ramana fix pe ecran*/
+  position: sticky;
+  font-size: 1.2em;
+  background: var(--culoare3);
+
+  span#home-btn {
+    color: transparent;
+  }
+}
+
+.icon {
+  height: 1.5rem;
+  width: auto;
+}
+
+/*deschidere submeniu*/
+
+#hamburger {
+  display: none;
+  height: var(--meniu-height);
+
+  img {
+    height: 2.6rem;
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@keyframes growOut {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.scroll {
+  background-color: var(--culoare5);
+}

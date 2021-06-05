@@ -1,0 +1,28 @@
+hr#hr-stil {
+    border: none;
+    border-top: 0.15em solid;
+    border-color: var(--rosu);
+    overflow: visible;
+    text-align: center;
+    height: 0.3em;
+    width: 85%;
+  
+    display: block;
+  }
+  
+  hr#hr-stil:after {
+    content: "✈";
+    font-size: 2.5em;
+    padding: 0 0.25em;
+    right: 57%;
+    position: relative;
+    top: -0.75em;
+  }
+  hr#hr-stil:before {
+    content: "✈";
+    font-size: 2.5em;
+    padding: 0 0.25em;
+    left: 57%;
+    position: relative;
+    top: -0.75em;
+  }

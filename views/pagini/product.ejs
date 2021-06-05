@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  
+  <meta name="keywords" content="skydiving, parachute, frefall, plane, fly, flying, glide, tandem" />
+  <meta name="description" content="Cateva informatii despre parasutismul din Romania si din Lume." />
+  
+  <title>Skydiving-shop</title>
+  <%- include ("../fragmente/head") %>
+
+
+</head>
+
+<body>
+  <%- include ("../fragmente/header") %>  <!-- afiseaza rezultatul functiei-->
+  <main id="shop">
+    <h3 class="brand"> <span> <%-locals.prod.brand %> </span> - <span> <%-locals.prod.model %></h3>
+    
+      <article class="solo_product">
+        
+        <div class="left">
+          
+          <img src="/resurse/Poze/shop/<%-prod.imag%>" alt="">
+          <ul>
+            <li id="pr_li">
+              <span class="val_price"><%-prod.price %></span> €
+            </li>
+            <li><p class="val_type">Type:<%-prod.type %>
+            </p></li>
+            
+            
+          </ul>
+
+
+        </div>
+        <div class="right">
+          <ul>
+            <li >
+              <p>Material: <span class="val_material"><%-prod.material %></span></p>
+            </li>
+            <li><p>Description: <span class="val_description"><%-prod.description %></span> </p></li>
+            
+            <li>
+              <time class="val_time" datetime="<%-prod.yr %> <%-prod.mon %>  <%-prod.dy%>">Manufactured:
+                <span class="val_date">
+                  <!--'zi_saptamana, zi nume_luna an', de exemplu Sambata 15 Septembrie 2018-->
+                  <%-prod.dm %>
+                </span>
+              </time>
+            </li>
+            <li>
+              <p>Free altimeter: <span class="val_free_alti"><%-prod.free_altimeter %></span></p>
+            </li>
+            <li>
+              <p>Sizes: <span class="val_sizes">
+                  <%-prod.sizes %>
+                </span> </p>
+            </li>
+            <li>
+              <p>Color: <span class="val_color"><%-prod.color %></span> </p>
+            </li>
+            <li>
+              <p>Porosity: <%-prod.porosity %> </p>
+            </li>
+            <li>
+              <p>Cells: <%-prod.cells %> </p>
+            </li>
+            <li>
+              <p>Load: <%-prod.load %> </p>
+            </li>
+          </ul>
+          
+          
+        </div>
+      </article>
+      
+  </main>
+
+  <%- include("../fragmente/footer.ejs") %>
+  <div class="banner">
+    ACESTA ESTE UN PROIECT SCOLAR <br />SI TREBUIE TRATAT CA ATARE
+  </div>
+</body>
+
+</html>

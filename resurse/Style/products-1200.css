@@ -1,0 +1,32 @@
+@media screen and (max-width:1600px){
+
+    
+    div#products{
+      grid-template-columns:repeat(2,1fr);
+      grid-gap:2rem;
+  }
+  
+}
+
+@media screen and (max-width:1200px){
+
+    
+    div#filers{
+    
+        position: inherit;
+        
+        
+      }
+      div#products{
+        grid-template-columns:1fr;
+    }
+    article.product{
+        width:35rem;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    
+}
+
+
+

@@ -1,0 +1,78 @@
+#hamburger{
+    display:block;
+}
+/* implicit meniul e ascuns*/
+ul.menu{
+    display:none;
+    position:absolute;
+    width:100%;
+    
+    
+}
+nav ul.menu li a{
+    background: var(--culoare3);
+}
+#input-hamburger:checked+ul.menu{
+    display: block;
+    animation: clip-fade .4s linear;
+    
+}
+
+nav ul.menu >li{
+    width:100%;
+}
+nav ul.menu>li ul{
+    position:absolute;
+    width:100%;
+    z-index:20;
+}
+ul.menu a span#home-btn{
+    display: none;
+}
+@keyframes clip-fade {
+    0%{
+      -webkit-mask-image: linear-gradient(to top,transparent 100%, black);
+      mask-image: linear-gradient(to top,transparent 100%, black);
+  }
+  10%{
+      -webkit-mask-image: linear-gradient(to top,transparent 90%, black);
+      mask-image: linear-gradient(to top,transparent 90%, black);
+  }
+  20%{
+      -webkit-mask-image: linear-gradient(to top,transparent 80%, black);
+      mask-image: linear-gradient(to top,transparent 80%, black);
+  }
+  30%{
+      -webkit-mask-image: linear-gradient(to top,transparent 70%, black);
+  }
+  40%{
+      -webkit-mask-image: linear-gradient(to top,transparent 60%, black);
+      mask-image: linear-gradient(to top,transparent 70%, black);
+  }
+  50%{
+      -webkit-mask-image: linear-gradient(to top,transparent 50%, black);
+      mask-image: linear-gradient(to top,transparent 50%, black);
+  }
+  60%{
+      -webkit-mask-image: linear-gradient(to top,transparent 40%, black);
+      mask-image: linear-gradient(to top,transparent 40%, black);
+  }
+  70%{
+      -webkit-mask-image: linear-gradient(to top,transparent 30%, black);
+      mask-image: linear-gradient(to top,transparent 30%, black);
+  }
+  80%{
+      -webkit-mask-image: linear-gradient(to top,transparent 20%, black);
+      mask-image: linear-gradient(to top,transparent 20%, black);
+  }
+  90%{
+      -webkit-mask-image: linear-gradient(to top,transparent 10%, black);
+      mask-image: linear-gradient(to top,transparent 10%, black);
+  }
+  100%{
+      -webkit-mask-image: linear-gradient(to top,transparent 0%, black);
+      mask-image: linear-gradient(to top,transparent 0%, black);
+  }
+}
+
+

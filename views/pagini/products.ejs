@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <meta name="keywords" content="skydiving, parachute, frefall, plane, fly, flying, glide, tandem" />
+  <meta name="description" content="Cateva informatii despre parasutismul din Romania si din Lume." />
+
+  <title>Skydiving-shop</title>
+  
+  <%- include ("../fragmente/head") %>
+
+
+</head>
+
+<body>
+  <%- include ("../fragmente/header") %>
+    <!-- afiseaza rezultatul functiei-->
+    <main id="shop">
+      <h3>Products</h3>
+      <div id="filers">
+        <label>Word from description:
+          <input type="text" id="description_canopy">
+        </label>
+        <label>Max price:
+          <input type="range" id="price_canopy" value="5200" min="0" max="5200" >
+    
+        </label>
+        <label>
+          This year's products:<input type="checkbox" id="date_canopy">
+        </label>
+        <label>
+          <select name="" id="sel_simplu">
+            <option value="all">All</option>
+            <% for (let mat of locals.materials) { %>
+              <option value="<%-mat.mats %>">
+                <%-mat.mats %>
+              </option>
+              <% } %>
+          </select>
+        </label>
+        <label> Color:
+          <select multiple size="7" id="sel_multiplu">
+            <option value="1">red</option>
+            <option value="2">blue</option>
+            <option value="3">green</option>
+            <option value="4">purple</option>
+            <option value="5">white</option>
+            <option value="6">yellow</option>
+            <option value="7">orange</option>
+          </select>
+        </label>
+        <label>Look for company or brand:
+          <textarea id="name_canopy" cols="20" rows="5"></textarea>
+        </label>
+        <div>
+          <label>All:
+            <input id="rad1" name="gr_rad" value="1" type="radio">
+          </label>
+          <label>With Altimeter:
+            <input id="rad1" name="gr_rad" value="2" type="radio">
+          </label>
+          <label>Without Altimeter
+            <input id="rad1" name="gr_rad" value="3" type="radio">
+          </label>
+        </div>
+        <div id="buttons"><button id="filtreaza">Filtreaza</button>
+          <button id="reseteaza"> Reseteaza</button>
+          <button id="sortCrescNume"> Crescator</button>
+          <button id="sortDescrescNume"> Descrescator</button>
+          <button id="sumEl"> Sum</button>
+          <div id="prod_sum"></div></div>
+        
+        
+      </div>
+      <div id="products">
+      <% for ( let prod of locals.produse) {%>
+        <article class="product">
+          
+          <div class="left">
+            <h4 class="val_name"><a href="/product/<%-prod.id %>"><span class="val_brand"><%-prod.brand %></span> - <span class="val_model"><%-prod.model %></span></a></h4>
+            <img src="/resurse/Poze/shop/<%-prod.imag%>" alt="">
+            <ul>
+              <li id="pr_li">
+                <span class="val_price"><%-prod.price %></span> €
+              </li>
+              <li><p class="val_type">Type:<%-prod.type %>
+              </p></li>
+              
+            </ul>
+
+
+          </div>
+          <div class="right">
+            <ul>
+              <li >
+                <p>Material: <span class="val_material"><%-prod.material %></span></p>
+              </li>
+              
+              <li><p>Description: <span class="val_description"><%-prod.description %></span> </p></li>
+              <li>
+                <time class="val_time" datetime="<%-prod.yr %> <%-prod.mon %>  <%-prod.dy%>">Manufactured:
+                  <span class="val_date">
+                    <!--'zi_saptamana, zi nume_luna an', de exemplu Sambata 15 Septembrie 2018-->
+                    <%-prod.dm %>
+                  </span>
+                </time>
+              </li>
+              <li>
+                <p>Free altimeter: <span class="val_free_alti"><%-prod.free_altimeter %></span></p>
+              </li>
+              <li>
+                <p>Sizes: <span class="val_sizes">
+                    <%-prod.sizes %>
+                  </span> </p>
+              </li>
+              <li>
+                <p>Color: <span class="val_color"><%-prod.color %></span> </p>
+              </li>
+            </ul>
+            
+            
+          </div>
+        </article>
+        <%}%>
+      </div>
+    </main>
+
+    <%- include("../fragmente/footer.ejs") %>
+      <div class="banner">
+        ACESTA ESTE UN PROIECT SCOLAR <br />SI TREBUIE TRATAT CA ATARE
+      </div>
+</body>
+
+</html>

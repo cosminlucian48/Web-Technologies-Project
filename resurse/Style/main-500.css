@@ -1,0 +1,25 @@
+html{
+    font-size:11px;
+}
+body{
+    --body-padding:0px;
+}
+h1{
+    text-align: center;
+}
+main{
+    display:block;
+}
+section{
+    margin-top:1rem;
+}
+#tab-links a{
+    width:4.4em;
+}
+iframe {
+    width:90%;
+  }
+
+  video{
+    width:80vw;
+  }

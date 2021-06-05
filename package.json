@@ -1,0 +1,30 @@
+{
+  "name": "resurse",
+  "version": "1.0.0",
+  "description": "Skydiving ",
+  "main": "index.js",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "pg": "^8.6.0",
+    "sass": "^1.32.12",
+    "sharp": "^0.28.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "skydiving",
+    "parachute",
+    "frefall",
+    "plane",
+    "fly",
+    "flying",
+    "glide",
+    "tandem"
+  ],
+  "author": "Bejan-Topse Lucian-Cosmin",
+  "license": "ISC"
+}
